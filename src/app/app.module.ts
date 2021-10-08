@@ -11,6 +11,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AgGridModule } from 'ag-grid-angular';
 
 // Components
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => {
                 deps: [HttpClient],
             },
         }),
+        AgGridModule.withComponents([]),
         AppRoutingModule,
         NgbModule,
         FontAwesomeModule,
