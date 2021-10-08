@@ -1,4 +1,7 @@
+// Angular
 import { Component } from '@angular/core';
+// Translate
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-root',
@@ -7,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     public title = 'angular-starter-kit';
+
+    constructor(private _translate: TranslateService) {
+        this._translate.setDefaultLang('en');
+    }
 }
